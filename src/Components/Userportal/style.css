@@ -1,0 +1,10 @@
+.Login_wrapper{
+    box-shadow: var(--shadow);
+    background: #fff;
+    max-width: 600px;
+    height: auto;
+    width: 70%;
+    border-radius: 1rem;
+    padding: 1rem;
+
+}

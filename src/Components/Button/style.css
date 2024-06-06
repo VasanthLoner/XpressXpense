@@ -1,0 +1,30 @@
+.btn {
+    margin: 1rem auto 0 auto;
+    color: var(--theme);
+    text-align: center;
+    width: 100%;
+    /* margin: 0.5 0rem; */
+    padding: 0.5rem;
+    background-color: #fff;
+    border:  solid 1px var(--theme);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+.btn:hover{
+    background-color: var(--theme);
+    transition: all 0.2s;
+    color: #fff;
+}
+.btn-green{
+    background-color: var(--theme) ;
+    color: #fff;
+}
+.btn-green:hover{
+    background-color: #fff;
+    color: var(--theme);
+    transition: all 0.3s;
+}

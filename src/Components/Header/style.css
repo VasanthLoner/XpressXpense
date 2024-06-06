@@ -1,0 +1,16 @@
+.navbar{
+    background: var(--theme) ;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.logout
+{ 
+    cursor: pointer;
+}
