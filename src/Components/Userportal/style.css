@@ -6,5 +6,15 @@
     width: 70%;
     border-radius: 1rem;
     padding: 1rem;
-
+}
+@media (max-width:567px) {
+    .Login_wrapper{
+        box-shadow: var(--shadow);
+        background: #fff;
+        max-width: 600px;
+        height: auto;
+        width: 90%;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
 }

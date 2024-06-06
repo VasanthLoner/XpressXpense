@@ -9,7 +9,7 @@
     opacity: 0.8;
 }
 .custom_input{
-    border-width: 0;
+    border: solid 1px #b3b3b33d;
     border-bottom-width: 1px;
     width: 100%;
     padding: 0.8rem;
