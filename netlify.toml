@@ -1,0 +1,17 @@
+[build]
+  publish = "dist" # Update this to your build output directory
+  command = "npm run build" # Update this to your build command
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=()"
+    
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
