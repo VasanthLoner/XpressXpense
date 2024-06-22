@@ -1,0 +1,26 @@
+@media (max-width:768px) {
+    .main-card{
+        box-shadow: var(--shadow);
+        max-width:100% ;
+        margin: 2rem;
+        flex: 1;
+    }  
+}
+@media (min-width:768px) {
+    .main-card{
+        box-shadow: var(--shadow);
+        min-width: 320px;
+        margin: 2rem;
+        flex: 1;
+        max-width: 400px;
+    }   
+}
+
+
+.card-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:2rem auto;
+    width: 90%;
+}
