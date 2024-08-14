@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import FinanceCard from "../Cards/FinanceCard";
 import Header from "../Header/Header";
 import { Modal } from "antd";
-import AddExpense from "../Modals/addExpense";
-import AddIncome from "../Modals/addIncome";
+import AddExpense from "../Modals/AddExpense";
+import AddIncome from "../Modals/AddIncome";
 import { addDoc, collection , getDocs, query } from "firebase/firestore";
 import { toast } from "react-toastify";
 import moment from "moment";
@@ -25,7 +25,6 @@ const Dashboard = () => {
 useEffect(() => {
     fetchTransactions();
     if (!user) {
-        // Redirect to login page or handle unauthorized access
         navigate('/');
     }
     else{
@@ -37,7 +36,7 @@ useEffect(()=>{
     calculateBalance();
 },[transactions])
 
-function calculateBalance(){
+ function calculateBalance(){
     let totalIncome = 0;
     let totalExpense = 0;
 
@@ -49,7 +48,6 @@ function calculateBalance(){
             totalExpense += transaction.amount;
         }
     });
-            // totalIncome += transaction.amount;
     setIncome(totalIncome);
     setExpense(totalExpense);
     setTotalbalance(totalIncome - totalExpense);
@@ -69,7 +67,6 @@ async function fetchTransactions(){
       console.log(doc.id, " => ", doc.data());
       transactionArr.push(doc.data());
     });
-    // console.log(transactionArr);
     setTransactions(transactionArr);
     setIsloading(false);
     toast.success('transaction fetched');
@@ -116,7 +113,15 @@ async function fetchTransactions(){
     } catch (e) {
         console.error(e);
         toast.error("couldn't add transaction");
-    }    
+    }  
+    finally{
+        // hideExpense();
+       await fetchTransactions();
+        calculateBalance();
+    }  
+    }
+    function resetBalance(){
+        setTotalbalance(0);
     }
 
 return(
@@ -128,6 +133,7 @@ return(
         totalbalance={totalbalance}
         showExpense={showExpense}
         showIncome={showIncome}
+        resetBalance={resetBalance}
         // hideExpense={hideExpense}
         // hideIncome={hideIncome}
         />

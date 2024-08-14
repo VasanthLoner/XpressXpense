@@ -11,6 +11,7 @@ function AddIncome({ isIncome, hideIncome, onFinish }) {
           onFinish={(values) => {
             onFinish(values, "income");
             form.resetFields();
+            hideIncome();
           }}
         >
           <Form.Item

@@ -8,13 +8,14 @@ function FinanceCard({
   totalbalance,
   showIncome,
   showExpense,
+  resetBalance,
 }) {
   return (
     <div>
       <Row className="card-row">
         <Card className="main-card" title="current balance">
           <p>₹{totalbalance}</p>
-          <Button text="Reset Balance" className="card-btn" green={true} />
+          <Button text="Reset Balance" className="card-btn" green={true} onClick={resetBalance} />
         </Card>
         <Card className="main-card" title="Total Income">
           <p>₹{income}</p>
