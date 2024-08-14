@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import FinanceCard from "../Cards/FinanceCard";
 import Header from "../Header/Header";
-import { Modal } from "antd";
-import AddExpense from "../Modals/AddExpense";
-import AddIncome from "../Modals/AddIncome";
+import AddExpense from "./../Modals/AddExpense";
+import AddIncome from "./../Modals/AddIncome";
 import { addDoc, collection , getDocs, query } from "firebase/firestore";
 import { toast } from "react-toastify";
 import moment from "moment";
@@ -154,14 +153,6 @@ return(
             hideIncome={hideIncome}
             onFinish={onFinish}
             />
-        {/* <Modal
-         visible={isIncome}
-         onCancel={hideIncome}
-         footer={null}
-         >
-            expense
-            </Modal>
-        </> */}
         </>
     )
 }
