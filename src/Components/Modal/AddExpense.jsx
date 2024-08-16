@@ -1,6 +1,6 @@
 import { Button, DatePicker, Form, Input, Modal } from "antd";
-
-function AddExpense({ isExpense, hideExpense, onFinish }) {
+// ISODJIAS 
+export function AddExpense({ isExpense, hideExpense, onFinish }) {
   const [form] = Form.useForm();
   return (
     <>
@@ -76,4 +76,5 @@ function AddExpense({ isExpense, hideExpense, onFinish }) {
   );
 }
 
-export default AddExpense;
+// export default AddExpense;
+
